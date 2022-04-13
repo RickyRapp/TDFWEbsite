@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    # vars.typography
+\*------------------------------------*/
+
+/**
+ * Project base line height
+ */
+
+$base-line-height: 34px;
+$base-font-size:   22px;
+
+
+$type-tiny:     12px;
+$type-xxsmall:  14px;
+$type-xsmall:   16px;
+$type-small:    18px;
+$type-base:     $base-font-size; 
+$type-medium:   32px;
+$type-xmedium:  40px;
+$type-large:    48px;
+$type-xlarge:   56px;
+$type-xxlarge:  70px;
+$type-xxxlarge: 80px;
+
+
+
+/**
+* Type weights
+*/
+$type-weight-light:      300;
+$type-weight-regular:    400;
+$type-weight-medium:     500;
+$type-weight-bold:       700;
+
+/**
+* Font stacks
+*/
+$ff-sans: 	'sofia-pro', -apple-system, BlinkMacSystemFont, 
+			"Segoe UI", "Roboto", "Oxygen", 
+			"Ubuntu", "Cantarell", "Fira Sans", 
+			"Droid Sans", "Helvetica Neue", 
+			sans-serif, Helvetica, Arial, sans-serif;
+$ff-serif: 'adobe-caslon-pro', Georgia, Times, serif;
+$ff-sans-soft: 	'sofia-pro-soft', -apple-system, BlinkMacSystemFont, 
+			"Segoe UI", "Roboto", "Oxygen", 
+			"Ubuntu", "Cantarell", "Fira Sans", 
+			"Droid Sans", "Helvetica Neue", 
+			sans-serif, Helvetica, Arial, sans-serif;;

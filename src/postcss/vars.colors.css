@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    # vars.colors
+\*------------------------------------*/
+
+/**
+* Generic colors
+* Color naming taken from: http://www.color-blindness.com/color-name-hue/
+*/
+
+$regal-blue:    #223a5e;
+$east-bay:      #44536D;
+$goldenrod:     #bc6d11;
+$scandal:       #B3DBD3;
+
+$swans-down:    #DFE9E6;
+/* $hint-of-red:   #FBF7F7; */
+$hint-of-red:   #f8f5ee;
+$tranquill:     #EEF5F3;
+$manatee:       #878fa2;
+$hawkes-blue:   #e9edf6;
+/*
+    Shades of gray (pure gray)
+    ------------------------------------
+    If you need mix some color to gray, use 10% of saturated color
+*/
+$grey-1: #f0f0f0;  /*  6% - lightness */
+$grey-2: #d4d4d4;  /* 17% - lightness */
+$grey-3: #b8b8b8;  /* 28% - lightness */
+$grey-4: #9c9c9c;  /* 39% - lightness */
+$grey-5: #7f7f7f;  /* 50% - lightness */
+$grey-6: #636363;  /* 61% - lightness */
+$grey-7: #474747;  /* 72% - lightness */
+$grey-8: #2b2b2b;  /* 83% - lightness */
+$grey-9: #0f0f0f;  /* 94% - lightness */
+
+/* Light mode colors */
+$color-primary:     $regal-blue;
+$color-secondary:   $goldenrod;
+$color-tertiary:    $scandal;
+
+$color-text:    $manatee;
+$white:         white;
+
+/**
+* Utility colors
+*/
+$color-warning:     #e21f26;
+$color-success:     #00db6d;
+$color-note:        #ff9e2c;

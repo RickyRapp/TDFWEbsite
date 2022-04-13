@@ -1,0 +1,451 @@
+<form id="createAccountForm" name="createAccountForm">
+    <section id="step_1" role="region" class="section--sml">
+        <div class="container">
+            <h3 class="u-mar--bottom--lrg type--center">Create your account</h3>
+            <div class="row">
+                <div class="col col-sml-12 col-lrg-6 col-xlrg-8">
+                    <div class="card--white u-mar--bottom--lrg">
+                        <div class="type--color--primary type--center u-mar--bottom--lrg type--wgt--regular">Choose
+                            Account Type</div>
+                        <div class="toggle u-mar--bottom--lrg">
+                            <input id="isCharityAccount" name="isCharityAccount" class="toggle__input" type="checkbox">
+                            <label for="isCharityAccount" class="toggle__label">
+                                <label class="toggle__label--unchecked">Donors</label>
+                                <label class="toggle__label--checked">Charities</label>
+                            </label>
+                        </div>
+                        <div class="row row-align-bottom">
+                            <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" name="donorInformations">
+                                <div class="form__field">
+                                    <label for="firstName" class="form__label">First Name <span
+                                            class="validation__mark">*</span></label>
+                                    <input id="firstName" name="firstName" type="text" class="input input--base" />
+                                </div>
+                            </div>
+                            <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" name="donorInformations">
+                                <div class="form__field">
+                                    <label for="lastName" class="form__label">Last Name <span
+                                            class="validation__mark">*</span></label>
+                                    <input id="lastName" name="lastName" type="text" class="input input--base" />
+                                </div>
+                            </div>
+
+                            <div class="col col-sml-12"  name="donorInformations">
+                                <div class="form__field">
+                                    <label for="email" class="form__label">Email <span
+                                            class="validation__mark">*</span></label>
+                                    <input id="email" name="email" type="email" class="input input--base" />
+                                </div>
+                            </div>
+
+                            <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" name="donorInformations">
+                                <div class="form__field">
+                                    <label for="pass-1" class="form__label">Password <span
+                                            class="validation__mark">*</span></label>
+                                    <input id="password" name="password" type="password" class="input input--base" autocomplete="off" placeholder="min: 8, capital, number and symbol" />
+                                </div>
+                            </div>
+                            <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" name="donorInformations">
+                                <div class="form__field">
+                                    <label for="confirmPassword" class="form__label">Confirm Password</label>
+                                    <input id="confirmPassword" name="confirmPassword" type="password"
+                                        class="input input--base" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div name="charityInformations" style="display: none;">
+                            Coming soon!
+                        </div>
+                        <!-- <div class="row row-align-bottom">
+                            <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" name="charityInformations">
+                                <div class="form__field">
+                                    <label for="firstName" class="form__label">First Name <span
+                                            class="validation__mark">*</span></label>
+                                    <input id="firstName" name="firstName" type="text" class="input input--base" />
+                                </div>
+                            </div>
+                            <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" name="charityInformations">
+                                <div class="form__field">
+                                    <label for="lastName" class="form__label">Last Name <span
+                                            class="validation__mark">*</span></label>
+                                    <input id="lastName" name="lastName" type="text" class="input input--base" />
+                                </div>
+                            </div>
+
+                            <div class="col col-sml-12"  name="charityInformations">
+                                <div class="form__field">
+                                    <label for="email" class="form__label">Email <span
+                                            class="validation__mark">*</span></label>
+                                    <input id="email" name="email" type="email" class="input input--base" />
+                                </div>
+                            </div>
+
+                            <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" name="charityInformations">
+                                <div class="form__field">
+                                    <label for="pass-1" class="form__label">Password <span
+                                            class="validation__mark">*</span></label>
+                                    <input id="password" name="password" type="password" class="input input--base" autocomplete="off" placeholder="min: 8, capital, number and symbol" />
+                                </div>
+                            </div>
+                            <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" name="charityInformations">
+                                <div class="form__field">
+                                    <label for="confirmPassword" class="form__label">Confirm Password</label>
+                                    <input id="confirmPassword" name="confirmPassword" type="password"
+                                        class="input input--base" />
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="type--right--from--lrg type--center--to--med" name="donorInformations">
+                        <a href="javascript:void(0)" class="btn btn--base btn--primary" id="onNextStep1Button">Next</a>
+                    </div>
+                </div>
+                <div class="col col-sml-12 col-lrg-6 col-xlrg-4 u-hide--to--med">
+                    <div class="card--enh u-mar--bottom--xxlrg">
+                        <div class="type--color--secondary u-mar--bottom--med">FAQ</div>
+                        <ul class="js-expandable faq__list">
+                            <li class="u-mar--bottom--sml">
+                                <div class="u-mar--right--med">
+                                    <button class="btn btn--expand" type="button">
+                                        <i class="icon--plus"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="faq__question">Does it cost to set up an account?</div>
+                                    <p class="faq__answer u-mar--top--tny">No, there are no costs whatsoever to open or
+                                        operate an account.</p>
+                                </div>
+                            </li>
+
+                            <li class="u-mar--bottom--sml">
+                                <div class="u-mar--right--med">
+                                    <button class="btn btn--expand" type="button">
+                                        <i class="icon--plus"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="faq__question">Is my information secure?</div>
+                                    <p class="faq__answer u-mar--top--tny">Absolutely. Your information is held at the highest standards using state-of-the-art security systems.</p>
+                                </div>
+                            </li>
+
+                            <li class="u-mar--bottom--sml">
+                                <div class="u-mar--right--med">
+                                    <button class="btn btn--expand" type="button">
+                                        <i class="icon--plus"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="faq__question">Does my profile name have to match the name on my
+                                        payments?</div>
+                                    <p class="faq__answer u-mar--top--tny">No. You may enter third-party payees names on
+                                        a per deposit basis.</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="card--enh card--enh--blue">
+                        <div class="type--color--negative u-mar--bottom--med">Need help?</div>
+                        <ul class="list--details">
+                            <li>
+                                <i class="u-icon u-icon--med u-icon--mail u-mar--right--sml"></i>
+                                <span class="type--sml type--color--negative">support@thedonorsfund.org</span>
+                            </li>
+                            <li>
+                                <i class="u-icon u-icon--med u-icon--phone u-mar--right--sml"></i>
+                                <span class="type--sml type--color--negative"><a class="u-anchor--negative"
+                                        href="tel:1844.666.0808">1844.666.0808</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="step_2" role="region" class="section--sml" style="display: none;">
+        <!-- <section id="step_2" role="region" class="section--sml"> -->
+        <div class="container" id="donorStep2">
+            <h3 class="u-mar--bottom--lrg type--center">Tell us about your fund</h3>
+            <div class="row">
+                <div class="col col-sml-12 col-lrg-6 col-xlrg-8">
+                    <div class="card--white u-mar--bottom--sml">
+                        <div class="type--color--primary u-mar--bottom--med type--wgt--regular type--center">Fund
+                            Details</div>
+                        <form>
+                            <div class="row row-align-bottom row--form">
+                                <div class="col col-sml-12">
+                                    <div class="form__field">
+                                        <label for="fundname" class="form__label">Fund Name <span
+                                                class="validation__mark">*</span></label>
+
+                                        <div class="inputgroup">
+                                            <div class="inputgroup--main">
+                                                <input id="fundName" name="fundName" type="text"
+                                                    class="input input--base" placeholder="e.g. Gates Family" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-sml-12">
+                                    <div class="form__field">
+                                        <div class="card card--form">
+                                            <div>
+                                                <input id="isPrivateAccount" name="isPrivateAccount" type="checkbox"
+                                                class="input--check" name="isPrivateAccount" value="true">
+                                                <label class="card--form__label" for="isPrivateAccount">Enroll for <a class="u-padd--x--tny u-display--ib" href="/private-client.html" target="_blank"> Private Client </a> Suite</label>
+                                            </div>
+                                        <div class="type--sml">What is this? The Private Client suite is a platform designed to scale with your giving Initial deposit of $50,000 is required </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6">
+                                    <div class="form__field">
+                                        <label for="addressLine1" class="form__label">Address Line 1<span
+                                                class="validation__mark">*</span></label>
+                                        <input id="addressLine1" name="addressLine1" type="text"
+                                            class="input input--base" />
+                                    </div>
+                                </div>
+
+                                <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6">
+                                    <div class="form__field">
+                                        <label for="addressLine2" class="form__label">Address Line 2</label>
+                                        <input id="addressLine2" name="addressLine2" type="text"
+                                            class="input input--base" />
+                                    </div>
+                                </div>
+
+                                <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6">
+                                    <div class="form__field">
+                                        <label for="city" class="form__label">City <span
+                                                class="validation__mark">*</span></label>
+                                        <input id="city" name="city" type="text" class="input input--base" />
+                                    </div>
+                                </div>
+                                <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6">
+                                    <div class="form__field">
+                                        <label for="state" class="form__label">State <span
+                                                class="validation__mark">*</span></label>
+                                        <input id="state" name="state" type="text" class="input input--base" />
+                                    </div>
+                                </div>
+                                <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6">
+                                    <div class="form__field">
+                                        <label for="zipCode" class="form__label">ZIP <span
+                                                class="validation__mark">*</span></label>
+                                        <input id="zipCode" name="zipCode" type="text" class="input input--base" />
+                                    </div>
+                                </div>
+                                <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6">
+                                    <div class="form__field">
+                                        <label for="number" class="form__label">Number <span
+                                                class="validation__mark">*</span></label>
+                                        <input id="number" name="number" type="tel" class="input input--base" />
+                                    </div>
+                                </div>
+                                <div class="col col-sml-12">
+                                    <div class="form__field">
+                                        <label class="form__label">Date of Birth <span
+                                                class="validation__mark">*</span></label>
+                                        <div class="row row--form row-align-bottom">
+                                            <div class="col col-sml-12 col-med-5">
+                                                <label class="form__label">Month</label>
+                                                <select class="input input--base input--select" id="month" name="month">
+                                                    <option value="1">January</option>
+                                                    <option value="2">February</option>
+                                                    <option value="3">March</option>
+                                                    <option value="4">April</option>
+                                                    <option value="5">May</option>
+                                                    <option value="6">June</option>
+                                                    <option value="7">July</option>
+                                                    <option value="8">August</option>
+                                                    <option value="9">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+                                            </div>
+                                            <div class="col col-sml-5 col-med-3">
+                                                <label class="form__label">Day</label>
+                                                <input id="day" name="day" type="text" class="input input--base"
+                                                    pattern="[0-9]+" />
+                                            </div>
+                                            <div class="col col-sml-7 col-med-4">
+                                                <label class="form__label">Year</label>
+                                                <input id="year" name="year" type="text" class="input input--base"
+                                                    pattern="[0-9]+" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-sml-12">
+                                    <div class="form__field">
+                                        <input id="isThisBusinessAccount" name="isThisBusinessAccount" type="checkbox"
+                                            class="input--check" value="true">
+                                        <label for="isThisBusinessAccount">Is this a business account?</label>
+                                    </div>
+                                </div>
+                                <div name="businessFieldCompanyName"
+                                    class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" style="display: none;">
+                                    <div class="form__field">
+                                        <label for="companyName" class="form__label">Please enter a company name <span
+                                                class="validation__mark">*</span></label>
+                                        <input id="companyName" name="companyName" type="text"
+                                            class="input input--base" />
+                                    </div>
+                                </div>
+                                <div name="businessFieldDba" class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6"
+                                    style="display: none;">
+                                    <div class="form__field">
+                                        <label for="dba" class="form__label">DBA</label>
+                                        <input id="dba" name="dba" type="text" class="input input--base" />
+                                    </div>
+                                </div>
+                                <div name="businessFieldWebsite" class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6"
+                                    style="display: none;">
+                                    <div class="form__field">
+                                        <label for="website" class="form__label">Website</label>
+                                        <input id="website" name="website" type="text" class="input input--base" />
+                                    </div>
+                                </div>
+                                <div name="businessFieldBusinessType"
+                                    class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6" style="display: none;">
+                                    <div class="form__field">
+                                        <label for="businessTypeId" class="form__label">Business type <span
+                                                class="validation__mark">*</span></label>
+                                        <select name="businessTypeId" id="businessTypeId"
+                                            class="input input--base"></select>
+                                    </div>
+                                </div>
+                                <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6">
+                                    <div class="form__field">
+                                        <label for="securityPin" class="form__label">Please enter a 4 digit security PIN
+                                            <span class="validation__mark">*</span></label>
+                                        <input id="securityPin" name="securityPin" type="password"
+                                            class="input input--base" />
+                                    </div>
+                                </div>
+                                <div class="col col-sml-12 col-med-6 col-lrg-12 col-xlrg-6">
+                                    <div class="form__field">
+                                        <label for="confirmSecurityPin" class="form__label">Confirm PIN</label>
+                                        <input id="confirmSecurityPin" name="confirmSecurityPin" type="password"
+                                            class="input input--base" maxlength="4" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="errorContainer"></div>
+                    <div class="type--right--from--lrg type--center--to--med">
+                        <button type="submit" href="javascript:void(0)" class="btn btn--base btn--primary"
+                            id="onNextStep2Button">Create My Fund</a>
+                    </div>
+                </div>
+                <div class="col col-sml-12 col-lrg-6 col-xlrg-4 u-hide--to--med">
+                    <div class="card--enh u-mar--bottom--xxlrg">
+                        <div class="type--color--secondary u-mar--bottom--med">FAQ</div>
+                        <ul class="js-expandable faq__list">
+                            <li class="u-mar--bottom--sml">
+                                <div class="u-mar--right--med">
+                                    <button class="btn btn--expand" type="button">
+                                        <i class="icon--plus"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="faq__question">What is my Fund Name used for?</div>
+                                    <p class="faq__answer u-mar--top--tny">This will be an optional piece of information
+                                        that you can share with your grants to charities.</p>
+                                </div>
+                            </li>
+
+                            <li class="u-mar--bottom--sml">
+                                <div class="u-mar--right--med">
+                                    <button class="btn btn--expand" type="button">
+                                        <i class="icon--plus"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="faq__question">What is the 4 digit pin used for?</div>
+                                    <p class="faq__answer u-mar--top--tny">This will be utilized when making over the
+                                        phone transactions as well as when you make third party website donations.</p>
+                                </div>
+                            </li>
+
+                            <li class="u-mar--bottom--sml">
+                                <div class="u-mar--right--med">
+                                    <button class="btn btn--expand" type="button">
+                                        <i class="icon--plus"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <div class="faq__question">What is a business account?</div>
+                                    <p class="faq__answer u-mar--top--tny">A business account is setup for when the
+                                        source of funding is through your business.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card--enh card--enh--blue">
+                        <div class="type--color--negative u-mar--bottom--sml">Need help?</div>
+                        <ul class="list--details">
+                            <li>
+                                <i class="u-icon u-icon--med u-icon--mail u-mar--right--sml"></i>
+                                <span class="type--sml type--color--negative">support@thedonorsfund.org</span>
+                            </li>
+                            <li>
+                                <i class="u-icon u-icon--med u-icon--phone u-mar--right--sml"></i>
+                                <span class="type--sml type--color--negative"><a class="u-anchor--negative"
+                                        href="tel:1844.666.0808">1844.666.0808</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="charityStep2" style="display: none;">
+            <h3 class="u-mar--bottom--lrg type--center">Charities Directory</h3>
+            <div class="row">
+                <div class="col col-sml-12 col-lrg-12 col-xlrg-12">
+                    <input type="text" id="searchCharities"/>
+                </div>
+                <div class="col col-sml-12 col-lrg-12 col-xlrg-12">
+                    <table style="width:100%" id="charityGrid">
+                        <tr>
+                            <th></th>
+                            <th>Logo</th>
+                            <th>Charity Name</th>
+                            <th>Category</th>
+                            <th>Location</th>
+                            <th>Gross Receipts</th>
+                            <th>Assets</th>
+                        </tr>
+                        <tbody id="charityGridTbody"></tbody>
+                        </table>
+                        <button type="button" id="btnLoadMore">Load More</button>
+                </div>
+                <div class="col col-sml-12 col-lrg-12 col-xlrg-12">
+                    <button type="button" id="btnFinish">Finish</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</form>
+
+<section id="step_3" role="region" class="section--sml" style="display: none;">
+    <div class="container">
+        <h3 class="u-mar--bottom--med type--center">Apply for a Donor's Fund account</h3>
+        <div class="card--white">
+            <div class="type--color--primary u-mar--bottom--med">Your Account has been created!</div>
+            <p class="u-mar--bottom--tny">Please lookout for the confirmation email with instructions to finish setting
+                up your account.</p>
+        </div>
+    </div>
+</section>

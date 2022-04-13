@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    # component.numbers
+\*------------------------------------*/
+
+.numbers {
+
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-track .slick-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    &--primary {
+        text-align: center;
+
+        @media (--screen-to-lrg) {
+            padding: 0 calc($unit * 4);
+        }
+    }
+
+    &__title {
+        margin-bottom: calc($unit * 8);
+
+        @media (--screen-from-lrg) {
+            margin-bottom: calc($unit * 12);
+        }
+    }
+
+    &__img {
+        @media (--screen-to-med) {
+            display: inline-block;
+            width: 250px;
+        }
+
+        @media (--screen-from-lrg) {
+            margin-bottom: calc($unit * 8);
+        }
+    }
+
+    &__nav {
+
+        @media (--screen-from-med) {
+            display: none;
+        }
+
+        &--next,
+        &--prev {
+            position: absolute;
+            top:  50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        &--next {
+            left: unset;
+            right: 0;
+        }
+    }
+}
+
+.numbered {
+    padding-top: 70px;
+
+    @media (--screen-from-med) {
+        padding-top: 150px;
+    }
+
+    &__item {
+        position: relative;
+        font-weight: $type-weight-regular;
+        padding: calc($unit * 4) calc($unit * 6);
+        text-align: center;
+
+        @media (--screen-from-med) {
+            border-left: 2px solid color($color-secondary a(75%));
+            text-align: left;
+        }
+    }
+
+    &__number {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border: 1px solid color($color-primary a(50%));
+        border-radius: $radius-full;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+
+        @media (--screen-to-med) {
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
+
+        @media (--screen-from-med) {
+            transform: translate(-50%, -150%);
+        }
+    }
+}

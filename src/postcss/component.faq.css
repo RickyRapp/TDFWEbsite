@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    # component.faq
+\*------------------------------------*/
+
+.faq {
+
+    &__title {
+        font-size: responsive $type-tiny $type-small;
+        font-range: 320px 1600px;
+        
+        line-height: responsive 18px 24px;
+        line-height-range: 320px 1600px;
+        
+        text-transform: uppercase;
+        font-weight: $type-weight-light;
+        letter-spacing: 0.05em;
+    }
+
+    &__list {
+
+        li {
+            display: flex;
+            align-items: center;
+
+            &.is-expanded {
+                align-items: flex-start;
+
+                .faq__answer {
+                    display: block;
+                }
+
+                .icon--plus {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+    }
+
+    &__question {
+        color: $color-primary;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            color: $color-secondary;
+        }
+    }
+
+    &__answer {
+
+        display: none;
+        font-size: responsive $type-tiny $type-small;
+        font-range: 320px 1600px;
+        
+        line-height: responsive 18px 24px;
+        line-height-range: 320px 1600px;
+    }
+
+    
+
+}

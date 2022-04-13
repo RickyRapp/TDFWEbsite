@@ -1,0 +1,11 @@
+node_modules/
+bower_components/
+.vs/
+vs/
+*.sublime-workspace
+*.sublime-project
+*.suo
+*.sqlite
+*.cache
+
+**/dist

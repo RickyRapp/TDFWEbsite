@@ -1,0 +1,288 @@
+/*------------------------------------*\
+    # component.carousel
+\*------------------------------------*/
+
+$carousel-offset: 150px;
+
+.carousel {
+
+    &__img {
+
+        &--sml {
+            max-width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+            &.is-offset {
+                margin-top: -90px;
+            }
+
+            &.is-offset-2 {
+                margin-top: -70px;
+            }
+        }
+    }
+
+    &--center {
+
+        @media (--screen-to-xxlrg) {
+            text-align: center;
+        }
+    }
+
+    &--primary {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &--center {
+
+            @media (--screen-to-xxlrg) {
+                text-align: center;
+                width: 100%;
+                max-width: 550px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 0 calc($unit * 7);
+            }
+        }
+
+        &__title {
+            color: $color-primary;
+            text-align: center;
+            font-weight: $type-weight-light;
+
+            /* position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calc($unit * 8); */
+        }
+
+        &__item {
+            padding: calc($unit * 12) calc($unit * 4) calc($unit * 6) calc($unit * 0);
+
+            @media (--screen-to-sml) {
+                padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 2);
+            }
+
+            &__inner {
+                background: linear-gradient(0deg, white 0%, $hawkes-blue 100%);
+                /* width: 250px; */
+                width: 100%;
+                padding: calc($unit * 8);
+                position: relative;
+
+                @media (--screen-from-med) {
+                    width: 500px;
+                    /* width: 100%; */
+                }
+
+                &:hover {
+                    background: linear-gradient(0deg, white 0%, $hint-of-red 100%);
+
+                    .carousel--primary__title {
+                        color: $color-secondary;
+                    }
+                }
+            }
+        }
+
+        &__img {
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: calc($unit * 8);
+        }
+
+        &--offset {
+            @media (--screen-from-sml) {
+            margin-top: -90px;
+            margin-bottom: 0;
+            }
+        }
+
+        &__left {
+            width: 100%;
+
+            @media (--screen-from-xxlrg) {
+                width: calc(50% - $container-width / 6);
+            }
+            
+            
+            &__item {
+                width: 100%;
+                /* padding-right: calc($unit * 2); */
+
+                @media (--screen-from-xxlrg) {
+                    width: calc($container-width / 3 - $unit * 8);
+                    float: right;
+                    padding-right: calc($unit * 4);
+                }
+                @media (--screen-from-container) {
+                    width: calc($container-width / 3);
+                }       
+            }
+        }
+
+        &__right {
+            width: 100%;
+            position: relative;
+
+            @media (--screen-from-xxlrg) {
+                width: calc(50% + $container-width / 6);
+            }
+
+            &__item {
+                width: 100%;
+            }
+        }
+    }
+
+    &--secondary {
+
+        &__sub {
+            font-size: responsive $type-medium $type-medium;
+            font-range: 320px 1600px;
+            
+            line-height: responsive 32px 40px;
+            line-height-range: 320px 1600px;
+            
+            font-family: $ff-serif;
+            color: $color-secondary;
+            font-style: italic;
+            text-align: center;
+
+            @media (--screen-from-lrg) {
+                text-align: left;
+            }
+        }
+
+        &__text {
+            margin-bottom: calc($unit * 8);
+
+            @media (--screen-from-lrg) {
+                margin-bottom: calc($unit * 8);
+            }
+
+        }
+        
+        &__card {
+            
+            background-color: $swans-down;
+
+            @media (--screen-from-lrg) {
+                width: calc(100% - $carousel-offset);
+                display: flex;
+                align-items: center;
+                
+            }
+        }
+
+        &__left {
+            padding: calc($unit * 4);
+
+            @media (--screen-from-lrg) {
+                width: 50%;
+                padding: calc($unit * 4) 0 calc($unit * 4) calc($unit * 16);
+            }
+
+            @media (--screen-from-xlrg) {
+                padding: calc($unit * 8) 0 calc($unit * 8) calc($unit * 32);
+            }
+        }
+
+        &__right {
+            padding: calc($unit * 4);
+
+            @media (--screen-from-lrg) {
+                width: 50%;
+                padding: calc($unit * 4);
+            }
+
+            @media (--screen-from-xlrg) {
+                padding: calc($unit * 8);
+            }
+        }
+
+        .slick-dots {
+            width: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: calc($unit * 17);
+
+            @media (--screen-from-lrg) {
+                width: auto;
+                left: calc($unit * 30);
+                bottom: calc($unit * 12);
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &--testimonials {
+        padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 2);
+
+        @media (--screen-from-lrg) {
+            padding: calc($unit * 2) calc($unit * 4) calc($unit * 2) 0;
+        }
+
+        &--secondary {
+            padding: calc($unit * 2) calc($unit * 2) calc($unit * 2) calc($unit * 2);
+
+            @media (--screen-from-lrg) {
+                padding: calc($unit * 6) calc($unit * 4) calc($unit * 2) 0;
+            }
+        }
+
+        &__title {
+            color: $color-primary;
+            transition: color 250ms ease-in-out;
+            font-weight: $type-weight-medium;
+        }
+
+        &--inner {
+            background: linear-gradient(0deg, white 0%, $hawkes-blue 100%);
+            width: 100%;
+            padding: calc($unit * 4);
+            cursor: pointer;
+            transition: background 250ms ease-in-out;
+            text-align: center;
+
+            @media (--screen-from-lrg) {
+                padding: calc($unit * 8);
+                text-align: left;
+                width: 500px;
+            }
+            
+            &.is-big {
+
+                @media (--screen-from-lrg) {
+                    width: 480px;
+                }
+            }
+
+            &:hover {
+                background: linear-gradient(0deg, white 0%, $hint-of-red 100%);
+
+                .carousel--testimonials__title {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    &__nav {
+
+        &__wrap {
+            
+            .numbers__nav--next {
+                right: calc($unit * 2);
+            }
+
+            .numbers__nav--prev {
+                left: calc($unit * 2);
+            }
+        }
+    }
+}

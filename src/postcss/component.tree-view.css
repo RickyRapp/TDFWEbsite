@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    # component.tree-view
+\*------------------------------------*/
+
+.tree-view {
+    font-size: responsive $type-tiny $type-small;
+    font-range: 320px 1600px;
+    
+    line-height: responsive 16px 20px;
+    line-height-range: 320px 1600px;
+
+    &__category {
+        display: flex;
+        align-items: center;
+        padding: calc($unit * 2) 0;
+
+        &__title {
+            color: $color-primary;
+        }
+    }
+
+    &__sub {
+        text-transform: uppercase;
+
+        li {
+            padding: calc($unit * 1);
+        }
+    }
+
+    .u-icon--arrow-down {
+        background-image: svg-load('../postcss-svg/icon--arrow-down.svg', fill: $color-text);
+    }
+
+    &.is-active, &:hover, &:focus {
+
+        .tree-view__category__title {
+            color: $color-secondary;
+        }
+
+        .u-icon--arrow-down {
+            background-image: svg-load('../postcss-svg/icon--arrow-down.svg', fill: $color-secondary);
+        }
+    }
+
+    &.is-active {
+        .u-icon--arrow-down {
+            transform: rotate(180deg);
+        }
+    }
+}

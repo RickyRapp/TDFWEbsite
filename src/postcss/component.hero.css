@@ -1,0 +1,188 @@
+/*------------------------------------*\
+    # component.hero
+\*------------------------------------*/
+
+.hero {
+    padding: 0 calc($unit * 4);
+
+    @media (--screen-from-lrg) {
+        padding: 0 calc($unit * 8);
+    }
+    
+    &__text {
+        width: 100%;
+        order: 2;
+
+        @media (--screen-from-lrg) {
+            float: left;
+            width: 50%;
+            order: 1;
+        }
+    }
+
+    &__container {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @media (--screen-from-lrg) {
+            flex-direction: row;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-weight: $type-weight-medium;
+        color: $color-primary;
+
+        @media (--screen-to-med) {
+            align-items: flex-start;
+        }
+
+        &__item {
+            padding: $unit 0;
+            width: 33.33%;
+
+            @media (--screen-to-med) {
+                font-size: $type-xxsmall;      
+                line-height: 18px;
+                width: calc(40% - 2px);
+                background-color: $hawkes-blue;
+                margin: 1px;
+            }
+
+            &.first {
+
+                @media (--screen-to-med) {
+                    width: 100%;
+                }
+            }
+
+            span {
+                @media (--screen-to-med) {
+                    display: block;
+                }
+            }
+
+            &.second {
+                @media (--screen-to-med) {
+                    width: calc(20% - 2px);
+                }
+            }
+        }
+
+        @media (--screen-from-med) {
+
+            &__item {
+                white-space: nowrap;
+                padding: 0 calc($unit * 2);
+                border-right: 1px solid color($color-text a(50%));
+                width: auto;
+
+                &:last-child {
+                    border-right: 0;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        @media (--screen-from-med) and (--screen-to-lrg) {
+            width: 90%;
+
+            &__item {
+
+                /* &.second {
+                    border-right: 0;
+                } */
+
+                &.fourth {
+                    padding-left: 0;
+                }
+            }
+        }
+
+    }
+
+    &__logo {
+        text-align: center;
+
+        @media (--screen-to-lrg) {
+            width: 180px;
+            padding: 24px;
+        }
+
+        @media (--screen-from-xxlrg) {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            text-align: center;
+            justify-content: center;
+        }
+
+        &__wrap {
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 20px;
+                z-index: 99;
+                background: white;
+                background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+            }
+
+            &:after {
+                left: auto;
+                right: 0;
+                background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+            }
+        }
+
+        &__label {
+            font-size: responsive $type-tiny $type-xsmall;
+            font-range: 320px 1600px;
+
+            display: inline-block;
+            font-weight: $type-weight-medium;
+            color: $color-text;
+
+            @media (--screen-from-med) {
+                margin-right: calc($unit * 8);
+            }
+        }
+
+        &__img {
+            display: inline-block;
+            width: 100%;
+
+            @media (--screen-from-lrg) {
+                width: auto;
+                height: 72px;
+            }
+        }
+    }
+
+    &__img {
+        transform: translateX(300px);
+
+        &__wrap {
+            order: 1;
+
+            @media (--screen-from-lrg) {
+                order: 2;
+            }
+        }
+    }
+}

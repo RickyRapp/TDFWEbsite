@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+
+
+    <% if (webpackConfig.htmlElements.headTags) { %>
+    <!-- Configured Head Tags  -->
+    <%= webpackConfig.htmlElements.headTags %>
+    <% } %>
+</head>>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- keep width for all viewport sizes -->
+
+    <%= require('html-loader!../partials/header.html') %>
+
+
+    <main class="main" role="main">
+        <section class="section--med">
+            <div class="container container--sml u-mar--bottom--lrg">
+                <div class="type--center">
+                    <h3 class="u-mar--bottom--lrg">Welcome!</h3>
+
+                    <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                    to make a type specimen
+                    book.</p> -->
+
+                    <div class="card card--white u-mar--top--med jq-activation-in-process">
+                        <p class="type--medium">Please wait, <br> we're activating your account...</p>
+                    </div>
+                    <div id="messageContainer"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="jq-activation-finished" style="display: none;">
+                    <h5 class="u-mar--bottom--sml">Account Status:</h5>
+                    
+                    <div class="card--white card--white__flex u-mar--bottom--sml">
+                        <div>
+                            <h4 class="card--compare__title u-mar--bottom--sml">Make your first deposit</h4>
+                        </div>
+                        <div class="btn--expand btn--expand--lrg u-mar--left--auto" id="btnMakeFirstContribution">
+                            <i class="icon--plus"></i>
+                        </div>
+                    </div>
+
+                    <!-- <div class="card--white card--white__flex">
+                        <div>
+                            <h4 class="card--compare__title u-mar--bottom--sml">Set up legacy options</h4>
+                            <p class="type--sml u-mar--bottom--sml--to--med">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
+                            <button type="button" class="btn btn--base btn--primary u-mar--left--auto" id="btnLegacyOptions">
+                            Get started
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+    <!-- Webpack Dev Server reload -->
+    <script src="/webpack-dev-server.js"></script>
+    <% } %>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # component.form
+\*------------------------------------*/
+
+.form {
+
+    &__field {
+        margin-bottom: calc($unit * 4);
+    }
+
+    &__label {
+        font-size: $type-xsmall;
+        line-height: 16px;
+
+        margin-bottom: calc($unit * 2);
+        display: inline-block;
+    }
+}

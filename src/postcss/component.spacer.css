@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # component.spacer
+\*------------------------------------*/
+
+.spacer {
+
+    &--card {
+        margin-bottom: calc($unit * 2);
+
+        @media (--screen-from-med) {
+            margin-bottom: calc($unit * 4);
+        }
+
+        @media (--screen-from-lrg) {
+            margin-bottom: calc($unit * 6);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    # utils.display
+\*------------------------------------*/
+
+.u {
+	&-display {
+		&--i {
+			display: inline;
+		}
+
+		&--b {
+			display: block;
+		}
+
+		&--ib {
+			display: inline-block;
+		}
+
+		&--none {
+			display: none;
+		}
+	}
+}
+
+.flex {
+
+	&--column {
+
+		&--center {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+}

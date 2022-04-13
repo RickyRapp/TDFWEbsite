@@ -1,0 +1,381 @@
+/*------------------------------------*\
+    # component.card
+\*------------------------------------*/
+
+.card {
+
+    &--blue {
+        background-color: $hawkes-blue;
+    }
+
+    &--orange {
+        background-color: color($color-secondary a(10%));
+    }
+
+    &--med {
+        padding: calc($unit * 4);
+
+        @media (--screen-from-med) {
+            padding: calc($unit * 8);
+        }
+    }
+
+    &--personal {
+        background-color: $color-primary;
+        width: 100%;
+        padding: calc($unit * 4);
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (--screen-from-lrg) {
+            max-width: 480px;
+            transform: translateX($carousel-offset);
+            float: right;
+        }
+
+        &__name {
+            padding: calc($unit * 4);
+            padding-bottom: 0;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &--negative {
+        padding: calc($unit * 0);
+        background-color: $color-primary;
+        color: white;
+        width: 100%;
+        text-align: center;
+
+        @media (--screen-from-med) {
+            max-width: 768px;
+            text-align: left;
+        }
+
+        &.is-home {
+            max-width: 768px;
+            background-color: color($color-primary a(75%));   
+        }
+
+        &--white {
+            background-color: white;
+            color: $color-text;
+            padding: calc($unit * 4);
+            box-shadow: $shadow-lrg;
+            font-weight: $type-weight-regular;
+        }
+
+        @media (--screen-from-med) {
+            padding: calc($unit * 16) calc($unit * 8);
+
+            &.is-home {
+                 padding: calc($unit * 8) calc($unit * 8);
+            }
+        }
+
+        &--blank {
+            padding: calc($unit * 0) calc($unit * 0);
+
+            @media (--screen-from-med) {
+                padding: calc($unit * 0);
+            }
+        }
+    }
+
+    &--compare {
+        padding: calc($unit * 4);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        font-size: responsive $type-xsmall $type-small;
+        font-range: 320px 1600px;
+
+        @media (--screen-from-med) {
+            padding: calc($unit * 12);
+        }
+
+        &--primary {
+            background-color: $hawkes-blue;
+
+            @media (--screen-from-med) {
+                padding: calc($unit * 6);
+            }
+        }
+
+        &--secondary {
+            background-color: color($color-secondary a(10%));
+
+            @media (--screen-from-med) {
+                padding: calc($unit * 6);
+            }
+        }
+
+        &--blue {
+            background-color: $hawkes-blue;
+        }
+
+        &--orange {
+            background-color: color($color-secondary a(10%));
+        }
+
+        &--blank {
+            background-color: white;
+        }
+
+        &__title {
+            font-family: $ff-sans;
+            font-weight: $type-weight-medium;
+
+            font-size: responsive $type-base $type-medium;
+            font-range: 320px 1600px;
+            
+            line-height: responsive 28px 52px;
+            line-height-range: 320px 1600px;
+
+            text-align: left;
+        }
+
+        &__copy {
+            text-align: left;
+            
+            @media (--screen-from-lrg) {
+                max-width: 60%;
+            }
+        }
+
+
+        &__list {
+            color: $color-primary;
+
+            .list-group {
+                display: flex;
+                align-items: center;
+                margin-bottom: calc($unit * 2);
+            }
+
+            &--full {
+
+                @media (--screen-from-xlrg) {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &__free {
+            display: inline-block;
+            font-size: responsive $type-tiny $type-xxsmall;
+            font-range: 320px 1600px;
+            line-height: 24px;
+            height: 24px;
+
+            color: $color-secondary;
+            text-transform: uppercase;
+            background-color: white;
+            padding: 0 $unit;
+            border-radius: $radius-full;
+        }
+    }
+
+    &--simple {
+        background-color:white;
+        padding: calc($unit * 2) calc($unit * 4);
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &--enh {
+            background-color: $hawkes-blue;
+        }
+
+        &__img {
+            padding: calc($unit * 2) calc($unit * 4) calc($unit * 2) 0;
+            flex: 1 0 100px;
+        }
+
+        &__copy {
+            flex: 1 0 calc(100% - 100px);
+        }
+
+        @media (--screen-from-med) {
+            padding: calc($unit * 4) calc($unit * 8);
+        }
+    }
+
+    &--expandable {
+        cursor: pointer;
+
+        &__title {
+            color: $color-primary;
+        }
+
+        &__copy {
+            display: none;
+        }
+
+        &:hover {
+
+            .card--expandable__title {
+                color: $color-secondary;
+            }
+
+            .card--expandable__copy {
+                display: block;
+            }
+        }
+    }
+
+    &--white {
+        background-color: white;
+        padding: calc($unit * 4);
+        box-shadow: $shadow-lrg;
+
+        &__flex {
+            text-align: center;
+
+            .card--compare__title {
+                text-align: center;
+            }
+
+            @media (--screen-from-med) {
+                text-align: left;
+                display: flex;
+                align-items: center;
+
+                .card--compare__title {
+                    text-align: left;
+                }
+            }
+        }
+
+        @media (--screen-from-med) {
+            padding: calc($unit * 8);
+        }
+    }
+
+    &--enh {
+        background-color: $hint-of-red;
+        padding: calc($unit * 6);
+        box-shadow: $shadow-lrg;
+        border: 1px solid color($color-secondary a(50%));
+
+        &--blue {
+            background-color: color($color-primary a(75%));
+            border: 1px solid color($color-primary a(100%));
+        }
+    }
+
+    &--team {
+        background: linear-gradient(0deg, white 0%, $hawkes-blue 100%);
+        padding: calc($unit * 6);
+        margin-top: calc($unit * 6);
+        transition: all 250ms ease-in-out;
+
+        &__info {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+
+            background-color: color($color-primary a(85%));
+            color: white;
+
+            padding: calc($unit * 4);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            opacity: 0;
+            transition: all 250ms ease-in-out;
+        }
+
+        &__img {
+            margin-top: calc(-$unit * 12);
+            position: relative;
+
+        }
+
+        &__title {
+            font-family: $ff-sans;
+            font-weight: $type-weight-bold;
+
+            font-size: responsive $type-small $type-base;
+            font-range: 320px 1600px;
+            
+            line-height: responsive 44px 52px;
+            line-height-range: 320px 1600px;
+        }
+
+        &:hover, &:focus {
+            background: linear-gradient(0deg, white 0%, $hint-of-red 100%);
+
+            .card--team__title {
+                color: $color-secondary;
+            }
+
+            .card--team__info {
+                opacity: 1;
+            }
+        }
+
+        &--negative {
+            background: linear-gradient(0deg, white 0%, transparent 100%);
+
+            &:hover, &:focus {
+                background: linear-gradient(0deg, white 0%, white 100%);
+            }
+        }
+    }
+
+    &--has-baloons {
+        margin-left: 100px;
+        position: relative;
+        padding-left: 200px;
+
+        &__img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -100px;
+        }
+    }
+
+    &--address {
+        display: flex;
+        flex-direction: column;
+        
+        @media (--screen-to-xlrg) {
+            margin-bottom: calc($unit * 6);
+        }
+
+        &--grow {
+            flex-grow: 2;
+        }
+    }
+
+    &--form {
+        background-color: $hint-of-red;
+        padding: calc($unit * 4);
+
+        &__label {
+            color: $color-secondary;
+            font-weight: $type-weight-medium;
+        }
+
+        &__copy {
+            font-size: $type-small;
+            display: inline-block;
+            padding-left: calc($unit * 5);
+        }
+    }
+}

@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    # component.donors
+\*------------------------------------*/
+
+.donors {
+
+    &__wrap {
+
+        position: relative;
+        z-index: 1;
+
+        @media (--screen-from-med) {
+            display: flex;
+            /* align-items: center; */
+        }
+    }
+
+    &__img {
+        display: none;
+
+        @media (--screen-from-med) {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @media (--screen-from-med) {
+            padding-left: 240px;
+            width: 60%;
+        }
+
+        @media (--screen-from-lrg) {
+            width: 50%;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            background-color: $hawkes-blue;
+
+            @media (--screen-from-med) {
+                left: 120px;
+            }
+        }
+
+        &__percents {
+            display: flex;
+            color: $color-primary;
+
+            &__item {
+                text-align: center;
+                width: 33.33%;
+                border-right: 1px solid $color-primary;
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+
+        &__percent {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto calc($unit * 4);
+        }
+
+        &__dollar {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        &__perc {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    &__box {
+        @media (--screen-from-med) {
+            width: 40%;
+        }
+
+        @media (--screen-from-lrg) {
+            width: 50%;
+        }
+    }
+}

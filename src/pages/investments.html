@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+
+
+    <% if (webpackConfig.htmlElements.headTags) { %>
+    <!-- Configured Head Tags  -->
+    <%= webpackConfig.htmlElements.headTags %>
+    <% } %>
+</head>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- keep width for all viewport sizes -->
+
+    <%= require('html-loader!../partials/header.html') %>
+
+    
+    <main class="main" role="main">
+        <%= require('html-loader!../partials/investments/section-growth-giving.html') %>
+        <%= require('html-loader!../partials/investments/section-investment-benefits.html') %>
+        <%= require('html-loader!../partials/investments/section-how-it-work.html') %>
+        <%= require('html-loader!../partials/investments/section-investment-pools.html') %>
+        <%= require('html-loader!../partials/investments/section-first-investment.html') %>
+
+        <%= require('html-loader!../partials/footer.html') %>
+    </main>
+    
+
+    <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+    <!-- Webpack Dev Server reload -->
+    <script src="/webpack-dev-server.js"></script>
+    <% } %>
+</body>
+</html>

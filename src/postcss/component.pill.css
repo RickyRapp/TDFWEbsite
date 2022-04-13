@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    # component.pill
+\*------------------------------------*/
+
+
+.pill {
+    display: inline-block;
+    font-size: $type-tiny;
+    line-height: 16px;
+    border: 1px solid;
+    border-radius: $radius-full;
+    text-transform: uppercase;
+
+    &--secondary {
+        padding: 0 $unit;
+        color: $color-secondary;
+        background-color: color($color-secondary a(10%));
+        border-color: $color-secondary;
+
+        @media (--screen-to-med) {
+            margin-bottom: calc($unit * 2);
+
+        }
+    }
+
+    &--sml {
+        font-size: $type-tiny;
+        line-height: 1;
+        padding: $unit;
+        letter-spacing: 1px;
+    }
+
+    &--med {
+        font-size: $type-xsmall;
+        line-height: 1;
+        padding: $unit calc($unit * 2);
+        letter-spacing: 1px;
+    }
+
+    &--inline {
+        
+        @media (--screen-to-sml) {
+            margin-top: calc($unit * 2);
+        }
+
+        @media (--screen-from-sml) {
+            margin-left: calc($unit * 2);
+        }
+    }
+
+}

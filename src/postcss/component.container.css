@@ -1,0 +1,132 @@
+/*------------------------------------*\
+    # component.container
+\*------------------------------------*/
+$container-width: 1400px;
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $container-width;
+
+    &--sml {
+        max-width: 768px;
+    }
+
+    &--med {
+        max-width: 1024px;
+    }
+
+    &--split {
+        display: flex;
+        flex-direction: column;
+
+        @media (--screen-from-med) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__text {
+
+            @media (--screen-from-xxlrg) {
+                float: right;
+                width: calc($container-width / 2 - $unit * 6);
+            }
+
+            @media (--screen-from-container) {
+                width: calc($container-width / 2);
+            }
+        }
+
+        &__img {
+            margin-bottom: calc($unit * 4);
+
+            @media (--screen-from-sml) {
+                margin-bottom: calc($unit * 10);
+            }
+
+            @media (--screen-from-med) {
+                margin-bottom: 0;
+                max-width: none;
+                position: absolute;
+                right: 0;
+                width: 600px;
+                top: 50%;
+                transform: translate(50%, -50%);
+                z-index: 0;
+            }
+
+            @media (--screen-from-lrg) {
+                width: 100%;
+                transform: translate(3%, -50%);
+            }
+
+            &.is-bleed {
+                
+                 @media (--screen-from-lrg) {
+                    width: 120%;
+                    transform: translate(20%, -50%);
+                 }
+            }
+
+            &.is-big {
+                 @media (--screen-from-med) {
+                    transform: translate(25%, -50%);
+                }
+
+                @media (--screen-from-lrg) {
+                    width: 120%;
+                    transform: translate(0, -50%);
+                 }
+            }
+        }
+
+        &--left {
+            width: 100%;
+            order: 2;
+            text-align: center;
+            z-index: 1;
+
+            @media (--screen-from-med) {
+                text-align: left;
+                width: 50%;
+                order: 1;
+            }
+
+            @media (--screen-from-lrg) {
+                width: 50%;
+            }
+        }
+
+        &--right {
+            width: 100%;
+            order: 1;
+            position: relative;
+
+            @media (--screen-from-med) {
+                display: block;
+                width: 40%;
+                order: 2;
+            }
+
+            @media (--screen-from-lrg) {
+                width: 50%;
+            }
+        }
+
+        &--reverse {
+
+            .container--split--left {
+                order:2;
+            }
+
+            .container--split--right {
+                order:1;
+            }
+
+            .container--split__text {
+                float: left;
+            }
+        }
+
+    }
+}

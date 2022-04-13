@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    # component.img
+\*------------------------------------*/
+
+.img {
+
+    &--primary {
+        
+        &--top {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            mix-blend-mode: multiply;
+
+            @media (--screen-to-med) {
+                width: 100%;
+            }
+
+            @media (--screen-to-lrg) {
+                max-width: 420px;
+                margin-bottom: calc($unit * 4);
+            }
+        }
+    }
+
+    &--offset {
+
+        &--left {
+
+            @media (--screen-from-xlrg) {
+             margin-left: -100px !important;
+            }
+        }
+    }
+}

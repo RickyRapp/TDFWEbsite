@@ -1,0 +1,136 @@
+/*------------------------------------*\
+    # base.typography
+\*------------------------------------*/
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0; 
+    font-family: $ff-serif;
+    font-weight: $type-weight-medium;
+    color: $color-primary;
+
+    @media (--screen-to-med) {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+h1 {
+    font-size: responsive $type-large $type-xxxlarge;
+    font-range: 320px 1600px;
+    
+    line-height: responsive 56px 84px;
+    line-height-range: 320px 1600px;
+}
+
+h2 {
+    font-size: responsive $type-medium $type-xxlarge;
+    font-range: 320px 1600px;
+    
+    line-height: responsive 42px 80px;
+    line-height-range: 320px 1600px;
+}
+
+h3 { 
+    font-size: responsive $type-medium $type-xlarge; 
+    font-range: 320px 1600px;
+    
+    line-height: responsive 42px 60px;
+    line-height-range: 320px 1600px;
+}
+
+h4 {
+    font-size: responsive $type-medium $type-large;
+    font-range: 320px 1600px;
+    
+    line-height: responsive 44px 52px;
+    line-height-range: 320px 1600px;
+}
+
+h5 {
+    font-size: responsive $type-xsmall $type-small;
+    font-range: 320px 1600px;
+    
+    line-height: responsive $type-small $type-base;
+    line-height-range: 320px 1600px;
+
+    font-family: $ff-sans;
+    font-weight: $type-weight-regular;
+    color: $color-text;
+}
+
+h6 {
+    font-size: responsive $type-base $type-medium;
+    font-range: 320px 1600px;
+    
+    line-height: responsive 28px 32px;
+    line-height-range: 320px 1600px;
+}
+
+
+/**
+ * Paragraphs
+ */
+p {
+    margin: 0;
+}
+
+/**
+ * Lists (ol, ul, dd)
+ */
+ol, ul, dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ol {}
+ol li {}
+ul {}
+ul li {}
+dd {}
+dl dt {}
+dl dd {}
+
+/**
+ * Anchors
+ */
+a {
+    color: $color-primary;
+    text-decoration: none;
+    text-decoration-skip-ink: auto; /* Ensure that underlines don't pass through descenders. */
+}
+a:link {}
+a:hover {
+    color: color($color-primary lightness(+20));
+}
+a:focus {
+    outline: 0;
+    color: color($color-primary lightness(+30));
+}
+a:visited {}
+
+/**
+ * Typographic details
+ */
+hr {
+    border-top: 1px solid #bfbfbf;
+}
+em {}
+b, strong {
+    font-weight: bold
+}
+address {}
+small {}
+pre {}
+code {
+    background-color: color($color-text lightness(+80%));
+    padding: calc($unit / 2);
+    color: $color-secondary;
+}
+sub {}
+sup {
+    font-size: 50%;
+}
+strike {}

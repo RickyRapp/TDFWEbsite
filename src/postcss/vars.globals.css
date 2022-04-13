@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    # vars.globals
+\*------------------------------------*/
+/**
+ * The $unit variable is a global variable to be used
+ * in paddings, margins, for sizing and positioning
+ */
+$unit: 6px;
+
+/**
+    * Global radius and rounded
+    */
+$radius-full: 1000px;
+$radius-base: 6px;
+$transition: cubic-bezier(0.65, 0, 0.17, 0.98);
+
+$header-height: 55px;
+$page-header-height: 157px;
+$page-header-inner: 96px;

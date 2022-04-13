@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+
+
+    <% if (webpackConfig.htmlElements.headTags) { %>
+    <!-- Configured Head Tags  -->
+    <%= webpackConfig.htmlElements.headTags %>
+    <% } %>
+</head>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- keep width for all viewport sizes -->
+
+    <%= require('html-loader!../partials/header.html') %>
+
+    
+    <main class="main" role="main">
+        <section class="section--med">
+        <div class="container">
+        <h3 class="u-mar--bottom--sml">
+            Terms of use
+        </h3>
+        <div class="u-mar--bottom--sml">
+            By using our site, you are agreeing to comply with and be bound to the following terms and conditions of use.
+        </div>
+        <h5 class="type--color--primary u-mar--bottom--sml type--primary">
+            Introduction
+        </h5>
+        <div class="u-mar--bottom--sml">
+            Welcome to our website. If you continue to browse and use this website you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern The Donors' Fund's relationship with you in relation to this website. 
+        </div>
+        <h5 class="type--color--primary u-mar--bottom--sml type--primary">
+            Who are we
+        </h5>
+        <div class="u-mar--bottom--sml">
+            <div class="u-mar--bottom--sml">
+                The term 'The Donors' Fund' or 'us' or 'we' refers to the owner of the website whose registered office is at
+            </div>
+            <div class="u-mar--bottom--sml">
+                The Donors' Fund<br>
+                328 Third Street<br>
+                Lakewood, NJ 08701<br>
+                USA
+            </div>
+            <div class="u-mar--bottom--sml">
+                Our organizations employer identification number (EIN) is 47-4844275.
+            </div>
+            <div>
+                The term 'you' refers to the user or viewer of our website.
+            </div>
+        </div>
+        <h5 class="type--color--primary u-mar--bottom--sml type--primary">
+            The use of this website is subject to the following terms of use:
+        </h5>
+        <ul>
+            <li class="u-mar--bottom--xsml">
+                • The content of the pages of this website is for your general information and use only. It is subject to change without notice.
+            </li>
+            <li class="u-mar--bottom--xsml">
+                • Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.
+            </li>
+            <li class="u-mar--bottom--xsml">
+                • Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any services or information available through this website meet your specific requirements.
+            </li>
+            <li class="u-mar--bottom--xsml">
+                • This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, copy, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.
+            </li>
+            <li class="u-mar--bottom--xsml">
+                • All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.
+            </li>
+            <li class="u-mar--bottom--xsml">
+                • Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense.
+            </li>
+            <li class="u-mar--bottom--xsml">
+                • From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).
+            </li>
+            <li>
+                • Your use of this website and any dispute arising out of such use of the website is subject to the laws of the United States of America.
+            </li>
+        </ul>
+    </div>
+    </section>
+    <%= require('html-loader!../partials/footer.html') %>
+    </main>
+    
+
+    <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+    <!-- Webpack Dev Server reload -->
+    <script src="/webpack-dev-server.js"></script>
+
+    <% } %>
+</body>
+</html>

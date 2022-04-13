@@ -1,0 +1,215 @@
+/*------------------------------------*\
+    # utils.type
+\*------------------------------------*/
+
+.type {
+    /* Font letterform */
+    &--sans {
+        font-family: $ff-sans;
+    }
+
+    &--serif {
+        font-family: $ff-serif;
+    }
+
+    /* Font sizes */
+    &--tny {
+        font-size: $type-tiny;
+        line-height: 16px;
+    }
+
+    &--xsml {
+        font-size: $type-xsmall;      
+        line-height: 18px;
+    }
+
+    &--sml {
+        font-size: responsive $type-xsmall $type-small;
+        font-range: 320px 1600px;
+        
+        line-height: responsive 18px 28px;
+        line-height-range: 320px 1600px;
+    }
+
+    &--base {
+        font-size: responsive $type-small $type-base;
+        font-range: 320px 1600px;
+        
+        line-height: responsive 20px 28px;
+        line-height-range: 320px 1600px;
+    }
+
+    &--med {
+        font-size: responsive $type-base $type-medium;
+        font-range: 320px 1600px;
+        
+        line-height: responsive 28px 32px;
+        line-height-range: 320px 1600px;
+    }
+
+    &--lrg {
+        font-size: responsive $type-medium $type-large;
+        font-range: 320px 1600px;
+        
+        line-height: responsive 32px 40px;
+        line-height-range: 320px 1600px;
+    }
+
+    &--xlrg {
+        font-size: responsive $type-large $type-xlarge;
+        font-range: 320px 1600px;
+        
+        line-height: responsive 40px 44px;
+        line-height-range: 320px 1600px;
+    }
+
+    &--xxlrg {
+        font-size: responsive $type-xxlarge $type-xxxlarge;
+        font-range: 320px 1600px;
+        
+        line-height: responsive 44px 52px;
+        line-height-range: 320px 1600px;
+    }
+
+    /* Font weights */
+    &--wgt {
+        &--light {
+            font-weight: $type-weight-light;
+        }
+
+        &--regular {
+            font-weight: $type-weight-regular;
+        }
+
+        &--bold {
+            font-weight: $type-weight-bold;
+        }
+    }
+
+    /* Type colors */
+    &--color {
+        &--text {
+            color: $color-text;
+        }
+
+        &--opaque {
+            color: color(white a(.4));
+        }
+
+        &--primary {
+            color: $color-primary;
+        }
+
+        &--secondary {
+            color: $color-secondary;
+        }
+
+        &--negative {
+            color: white;
+        }
+
+        &--warning {
+            color: $color-warning;
+        }
+
+        &--success {
+            color: $color-success;
+        }
+
+        &--note {
+            color: $color-note;
+        }
+    }
+    
+    /* Type case */
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--lowercase {
+        text-transform: lowercase;
+    }
+        
+    &--narrow {
+        letter-spacing: 0.0625em;
+    }
+    &--wide {
+        letter-spacing: 0.1250em;
+    }
+    &--italic {
+        font-style: italic;
+    }
+
+    /* Type positioning */
+    &--center {
+        text-align: center;
+
+        &--to {
+
+            &--sml {
+
+                @media (--screen-to-sml) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &--to {
+
+            &--med {
+
+                @media (--screen-to-med) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &--to {
+
+            &--lrg {
+
+                @media (--screen-to-lrg) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &--left {
+        text-align: left;
+
+        &--from {
+
+            &--sml {
+
+                @media (--screen-from-sml) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &--right {
+        text-align: right;
+
+        &--from {
+
+            &--lrg {
+
+                @media (--screen-from-lrg) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &--nowrap {
+        white-space: nowrap;
+
+        &--fix {
+            @media (--screen-to-lrg) {
+                margin-left: -18px;
+            }
+        }
+    }
+}

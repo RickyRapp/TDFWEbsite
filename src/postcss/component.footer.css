@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    # component.footer
+\*------------------------------------*/
+
+.footer {
+    background-color: $color-primary;
+    color: white;
+    padding: calc($unit * 6) calc($unit * 4);
+    text-align: center;
+
+    @media (--screen-from-med) {
+        text-align: left;
+        padding: calc($unit * 8) calc($unit * 8);
+    }
+
+    @media (--screen-from-xlrg) {
+        padding: calc($unit * 12) calc($unit * 8);
+    }
+
+    &__logo {
+        height: calc($unit * 9);
+    }
+
+    &__text {
+        font-size: $type-xsmall;
+        opacity: 0.5;
+    }
+
+    &__title {
+        font-family: $ff-serif;
+        color: color(white a(0.5));
+        margin-bottom: calc($unit * 4);
+    }
+
+    &__nav {
+
+        li {
+
+            a {
+                font-size: responsive $type-tiny $type-xsmall;
+                font-range: 320px 1600px;
+
+                color: white;
+                letter-spacing: 0.05em;
+                opacity: 0.85;
+                font-weight: $type-weight-light;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }  
+        }
+
+        &--inline {
+            display: flex;
+
+            li {
+                padding: 0 calc($unit * 4)
+            }
+        }
+
+        &--mobile {
+            padding-bottom: calc($unit * 2);
+            margin-bottom: calc($unit * 4);
+            border-bottom: 1px solid color(white a(0.25));
+
+            li {
+                margin-bottom: calc($unit * 2);
+                
+                a {
+                    color: color(white a(40%));
+
+                    &:hover, &:active, &:focus {
+                        color: color(white a(100%));
+                    }
+
+                }
+            }
+        }
+    }
+
+    &__impressum {
+        border-top: 1px solid white;
+        padding-top: calc($unit * 2);
+        opacity: 0.25;
+        font-size: responsive $type-tiny $type-xsmall;
+        font-range: 320px 1600px;
+        
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,114 @@
+/*------------------------------------*\
+    # utils.icon
+\*------------------------------------*/
+
+.u {
+    &-icon {
+        display: inline-block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        vertical-align: middle;
+
+        &--align {
+
+            &--bottom {
+                vertical-align: bottom;
+            }
+
+            &--menu {
+                vertical-align: -3px;
+            }
+        }
+
+        &--xsml {
+            width: calc($unit * 2);
+            height: calc($unit * 2);
+        }
+
+        &--sml {
+            width: calc($unit * 3);
+            height: calc($unit * 3);
+        }
+
+        &--xmed {
+            width: calc($unit * 3.5);
+            height: calc($unit * 3.5);
+        }
+
+        &--med {
+            width: calc($unit * 4);
+            height: calc($unit * 4);
+        }
+
+        &--lrg {
+            width: calc($unit * 6);
+            height: calc($unit * 6);
+        }
+
+        &--xxlrg {
+            width: calc($unit * 12);
+            height: calc($unit * 12);
+        }
+
+        &--xxxlrg {
+            width: calc($unit * 24);
+            height: calc($unit * 24);
+        }
+
+        &--hamburger {
+            background-image: svg-load('../postcss-svg/icon--hamburger.svg', fill: color($color-primary a(0.5)));
+        }
+
+        &--arrow-up {
+
+            &--secondary {
+                background-image: svg-load('../postcss-svg/arrow-up.svg', stroke: $color-secondary);
+            }
+        }
+
+        &--c-arrow-left {
+            background-image: svg-load('../postcss-svg/c-arrow-left.svg', stroke: $color-text);
+        }
+
+        &--c-arrow-right {
+            background-image: svg-load('../postcss-svg/c-arrow-right.svg', stroke: $color-text);
+        }
+
+        &--arrow--double-down {
+            background-image: svg-load('../postcss-svg/arrow-double-down.svg', stroke: $color-secondary);
+        }
+
+        &--warning {
+            background-image: svg-load('../postcss-svg/alert.svg', fill: $color-warning);
+        }
+
+        &--details {
+            background-image: svg-load('../postcss-svg/details.svg', stroke: $color-primary);
+        }
+
+        &--send {
+            background-image: svg-load('../postcss-svg/plane.svg', fill: white);
+        }
+
+        &--phone {
+            background-image: svg-load('../postcss-svg/phone.svg', fill: white);
+        }
+
+        &--mail {
+            background-image: svg-load('../postcss-svg/mail.svg', fill: white); 
+        }
+
+        &--phone-o {
+            background-image: svg-load('../postcss-svg/phone-o.svg', stroke: $color-text); 
+        }
+
+        &--user {
+            background-image: svg-load('../postcss-svg/user.svg', stroke: $color-text); 
+        }
+
+        &--construction {
+            background-image: svg-load('../postcss-svg/construction.svg', stroke: $color-primary); 
+        }
+    } 
+}

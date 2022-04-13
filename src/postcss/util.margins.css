@@ -1,0 +1,360 @@
+/*------------------------------------*\
+    # util.margins
+\*------------------------------------*/
+
+/** 
+* you can use custom multiplyer for huge spacing
+* $custom: 15;
+
+* You can use spacers by axis 
+---------------------------------
+--   x-axis ->  left & right   --
+--   y-axis ->  top & bottom   --  
+---------------------------------
+*/
+
+.u {
+    &-mar {
+        &--top {
+            &--tny {
+                margin-top: calc($unit * 1);
+            }
+
+            &--sml {
+                margin-top: calc($unit * 2);
+            }
+
+            &--med {
+                margin-top: calc($unit * 3);
+            }
+
+            &--lrg {
+                margin-top: calc($unit * 4);
+            }
+
+            &--xlrg {
+                margin-top: calc($unit * 5);
+            }
+
+            &--xxlrg {
+                margin-top: calc($unit * 6);
+            }
+
+            &--xxxlrg {
+                margin-top: calc($unit * 7);
+            }
+
+            &--huge {
+                margin-top: calc($unit * 14);
+            }
+        }
+
+        &--right {
+            &--auto {
+                margin-left: auto;
+            }
+
+            &--xtny {
+                margin-right: calc($unit / 2);
+            }
+
+            &--tny {
+                margin-right: calc($unit * 1);
+            }
+
+            &--sml {
+                margin-right: calc($unit * 2);
+            }
+
+            &--med {
+                margin-right: calc($unit * 3);
+            }
+
+            &--lrg {
+                margin-right: calc($unit * 4);
+            }
+
+            &--xlrg {
+                margin-right: calc($unit * 5);
+            }
+
+            &--xxlrg {
+                margin-right: calc($unit * 6);
+            }
+
+            &--xxxlrg {
+                margin-right: calc($unit * 7);
+            }
+        }
+
+        &--bottom {
+            &--tny {
+                margin-bottom: calc($unit * 1);
+            }
+
+            &--xsml {
+                margin-bottom: calc($unit * 1);
+            }
+
+            &--sml {
+                margin-bottom: calc($unit * 3);
+
+                &--to--med {
+
+                    @media (--screen-to-med) {
+                        margin-bottom: calc($unit * 3);
+                    }
+                }
+            }
+
+            &--med {
+                margin-bottom: calc($unit * 4);
+            }
+
+            &--lrg {
+                margin-bottom: calc($unit * 5);
+            }
+
+            &--xlrg {
+                margin-bottom: calc($unit * 6);
+            }
+
+            &--xxlrg {
+                margin-bottom: calc($unit * 7);
+            }
+
+            &--xxxlrg {
+                margin-bottom: calc($unit * 8);
+            }
+
+            &--huge {
+                margin-bottom: calc($unit * 9);
+            }
+        }
+
+        &--left {
+            &--auto {
+                margin-left: auto;
+            }
+            
+            &--tny {
+                margin-left: calc($unit * 1);
+            }
+
+            &--xsml {
+                margin-left: calc($unit * 1);
+            }
+
+            &--sml {
+                margin-left: calc($unit * 2);
+            }
+
+            &--med {
+                margin-left: calc($unit * 3);
+            }
+
+            &--lrg {
+                margin-left: calc($unit * 4);
+            }
+
+            &--xlrg {
+                margin-left: calc($unit * 5);
+            }
+
+            &--xxlrg {
+                margin-left: calc($unit * 6);
+            }
+
+            &--xxxlrg {
+                margin-left: calc($unit * 7);
+            }
+        }
+
+        @media (--screen-from-med) {
+
+            &--bottom {
+                &--tny {
+                    margin-bottom: calc($unit * 1.5);
+                }
+
+                &--xsml {
+                    margin-bottom: calc($unit * 1.5);
+                }
+
+                &--sml {
+                    margin-bottom: calc($unit * 4);
+                }
+
+                &--med {
+                    margin-bottom: calc($unit * 4);
+                }
+
+                &--lrg {
+                    margin-bottom: calc($unit * 4.5);
+                }
+
+                &--xlrg {
+                    margin-bottom: calc($unit * 5.5);
+                }
+
+                &--xxlrg {
+                    margin-bottom: calc($unit * 6.5);
+                }
+
+                &--xxxlrg {
+                    margin-bottom: calc($unit * 7.5);
+                }
+
+                &--huge {
+                    margin-bottom: calc($unit * 8.5);
+                }
+            }
+        }
+    
+        @media (--screen-from-lrg) {
+            &--top {
+                &--tny {
+                    margin-top: calc($unit * 4);
+                }
+
+                &--sml {
+                    margin-top: calc($unit * 6);
+                }
+
+                &--med {
+                    margin-top: calc($unit * 8);
+                }
+
+                &--lrg {
+                    margin-top: calc($unit * 10);
+                }
+
+                &--xlrg {
+                    margin-top: calc($unit * 12);
+                }
+
+                &--xxlrg {
+                    margin-top: calc($unit * 14);
+                }
+
+                &--xxxlrg {
+                    margin-top: calc($unit * 16);
+                }
+
+                &--huge {
+                    margin-top: calc($unit * 24);
+                }
+            }
+
+            &--right {
+                &--auto {
+                    margin-left: auto;
+                }
+
+                &--tny {
+                    margin-right: calc($unit * 2);
+                }
+
+                &--sml {
+                    margin-right: calc($unit * 4);
+                }
+
+                &--med {
+                    margin-right: calc($unit * 6);
+                }
+
+                &--lrg {
+                    margin-right: calc($unit * 8);
+                }
+
+                &--xlrg {
+                    margin-right: calc($unit * 10);
+                }
+
+                &--xxlrg {
+                    margin-right: calc($unit * 12);
+                }
+
+                &--xxxlrg {
+                    margin-right: calc($unit * 14);
+                }
+            }
+
+            &--bottom {
+                &--tny {
+                    margin-bottom: calc($unit * 4);
+                }
+
+                &--xsml {
+                    margin-bottom: calc($unit * 3);
+                }
+
+                &--sml {
+                    margin-bottom: calc($unit * 6);
+                }
+
+                &--med {
+                    margin-bottom: calc($unit * 8);
+                }
+
+                &--lrg {
+                    margin-bottom: calc($unit * 10);
+                }
+
+                &--xlrg {
+                    margin-bottom: calc($unit * 12);
+                }
+
+                &--xxlrg {
+                    margin-bottom: calc($unit * 14);
+                }
+
+                &--xxxlrg {
+                    margin-bottom: calc($unit * 16);
+                }
+
+                &--huge {
+                    margin-bottom: calc($unit * 22);
+                }
+            }
+
+            &--left {
+                &--auto {
+                    margin-left: auto;
+                }
+                
+                &--tny {
+                    margin-left: calc($unit * 2);
+                }
+
+                &--xsml {
+                    margin-left: calc($unit * 1.5);
+                }
+
+                &--sml {
+                    margin-left: calc($unit * 4);
+                }
+
+                &--med {
+                    margin-left: calc($unit * 6);
+                }
+
+                &--lrg {
+                    margin-left: calc($unit * 8);
+                }
+
+                &--xlrg {
+                    margin-left: calc($unit * 10);
+                }
+
+                &--xxlrg {
+                    margin-left: calc($unit * 12);
+                }
+
+                &--xxxlrg {
+                    margin-left: calc($unit * 14);
+                }
+            }
+        }
+    }
+}

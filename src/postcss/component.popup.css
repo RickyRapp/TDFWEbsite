@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    # component.popup
+\*------------------------------------*/
+
+.popup {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    padding: calc($unit * 4);
+    width: 100%;
+    max-width: 1024px;
+    border: 1px solid color($color-text a(50%));
+            max-height: 90vh;
+        overflow-y: auto;
+
+    @media (--screen-from-lrg) {
+        padding: calc($unit * 6);
+    }
+
+    &__overlay {
+        position: fixed;
+        top:0;
+        right: 0;
+        bottom:0;
+        left: 0;
+
+        z-index: 200;
+        background-color: color(white a(95%));
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all 250ms ease-in-out;
+
+        &.is-open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__compare {
+
+        @media (--screen-from-lrg) {
+        display: flex;
+        justify-content: space-between;
+        }
+
+        &__item {
+            @media (--screen-from-lrg) {
+            width: calc(50% - $unit);
+            }
+        }
+    }
+
+    &__close {
+        display: block;
+        width: calc($unit * 4);
+        height: calc($unit * 4);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: calc($unit * 2);
+        background-image: svg-load('../postcss-svg/icon-close.svg', stroke: $color-primary);
+
+        position: absolute;
+        top: calc($unit * 2);
+        right: calc($unit * 2);
+
+        cursor: pointer;
+    }
+}

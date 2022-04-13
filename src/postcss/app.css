@@ -1,0 +1,117 @@
+/**
+* Title: Gator
+* Author/s: Mono
+* CSS build platform: Webpack
+* Node modules instalation: npm i/yarn install
+* Node version: 10.14.1 or higher
+* Project development build command: npm start/yarn start
+
+* CSS processor: PostCSS
+* CSS processor usage: autoprefixing, nesting, variables, minification, color functions
+* CSS name convention: BEM
+
+* Global indentation: 4 spaces
+* Global units: px
+* Global prefix: none
+
+* Browser support: IE11+, last 3 versions of modern browsers, Android 4+, iOS6+
+*/
+
+/**
+* Vars .......... postcss-simple-vars plugin for defining variables to use accross the project
+*/
+@import "vars.globals.css";
+@import "vars.typography.css";
+@import "vars.responsive.css";
+@import "vars.colors.css";
+@import "vars.shadows.css";
+
+/**
+* Tools .......... typography mixin, floted grid and clearfix
+*/
+/* @import "tool.typomatic.css"; */
+@import "tool.ricky.css";
+
+/**
+* Generic .......... normalize or reset CSS, box sizing
+*/
+@import "normalize.css";
+@import "generic.boxsizing.css";
+
+/**
+* Base .......... base structural stylings for setting the body, typography and other base styles (no classes should be added here)
+*/
+@import "base.globals.css";
+@import "base.typography.css";
+
+/**
+* Components .......... resuable components for all projects
+*/
+
+@import "component.container.css";
+@import "component.btn.css";
+@import "component.input.css";
+@import "component.header.css";
+@import "component.nav.css";
+@import "component.footer.css";
+@import "component.hero.css";
+@import "component.section.css";
+@import "component.title.css";
+@import "component.content.css";
+@import "component.list.css";
+@import "component.carousel.css";
+@import "component.card.css";
+@import "component.pill.css";
+@import "component.pool.css";
+@import "component.form.css";
+@import "component.validation.css";
+@import "component.faq.css";
+@import "component.tree-view.css";
+@import "component.toggle.css";
+@import "component.numbers.css";
+@import "component.spacer.css";
+@import "component.img.css";
+@import "component.donors.css";
+@import "component.inputgroup.css";
+@import "component.popup.css";
+/**
+* Views .......... specific website/app views (example: 404 view, login view)
+*/
+@import "view.404.css";
+@import "view.home.css";
+
+/**
+* Utils .......... reusable utilities such as floats, spacers etc.
+*/
+@import "util.display.css";
+@import "util.width.css";
+@import "util.floats.css";
+@import "util.margins.css";
+@import "util.paddings.css";
+@import "util.position.css";
+@import "util.grid.css";
+@import "util.grid-offset.css";
+@import "util.order.css";
+@import "util.clearing.css";
+@import "util.type.css";
+@import "util.separator.css";
+@import "util.icons.css";
+@import "util.align.css";
+@import "util.anchor.css";
+@import "util.radius.css";
+@import "util.visibility.css";
+@import "util.rotate.css";
+@import "util.blendmode.css";
+@import "util.hide.css";
+
+/**
+* Plugins .......... 3rd party code, external plugin CSS etc
+* Note: when importing code from a 3rd party it should be stripped off
+* any vendor prefixes since autoprefixer will use project specific vendor prefixes
+*/
+@import "plugin.fontface.css";
+@import "plugin.slick.css";
+
+/**
+* Shame .......... CSS shame file, to be avoided, exists only if REALLY necessary or legacy code.
+*/

@@ -1,0 +1,158 @@
+/*------------------------------------*\
+    # component.section
+\*------------------------------------*/
+
+.section{
+    padding: 0 calc($unit * 4);
+
+   &--lrg {
+       padding: calc($unit * 6) calc($unit * 4);
+
+        @media (--screen-from-sml) {
+           padding: calc($unit * 12) calc($unit * 16);
+       }
+
+       @media (--screen-from-med) {
+           padding: calc($unit * 12) calc($unit * 8);
+       }
+
+       @media (--screen-from-xlrg) {
+           padding: calc($unit * 24) calc($unit * 8);
+       }
+   }
+
+   &--med {
+       padding: calc($unit * 6) calc($unit * 4);
+
+        @media (--screen-from-sml) {
+           padding: calc($unit * 12) calc($unit * 16);
+       }
+
+       @media (--screen-from-med) {
+           padding: calc($unit * 12) calc($unit * 8);
+       }
+
+        @media (--screen-from-xlrg) {
+            padding: calc($unit * 24) calc($unit * 8);
+        }
+    }
+
+    &--top {
+       padding: calc($unit * 6) calc($unit * 4);
+
+        @media (--screen-from-sml) {
+           padding: calc($unit * 12) calc($unit * 16);
+       }
+
+       @media (--screen-from-med) {
+           padding: calc($unit * 12) calc($unit * 8);
+       }
+
+        @media (--screen-from-xxlrg) {
+            padding: calc($unit * 20) calc($unit * 8);
+        }
+    }
+
+   &--sml {
+       padding: calc($unit * 6) calc($unit * 4);
+
+        @media (--screen-from-sml) {
+           padding: calc($unit * 12) calc($unit * 16);
+       }
+
+       @media (--screen-from-med) {
+           padding: calc($unit * 12) calc($unit * 8);
+       }
+
+       @media (--screen-from-xlrg) {
+            padding: calc($unit * 12) calc($unit * 8);
+        }
+   }
+
+   &--tny {
+       padding: calc($unit * 6) calc($unit * 4);
+
+        @media (--screen-from-sml) {
+           padding:  calc($unit * 8) calc($unit * 8) calc($unit * 8) calc($unit * 8);
+       }
+
+       @media (--screen-from-med) {
+           padding: calc($unit * 8) calc($unit * 8) calc($unit * 8) calc($unit * 8);
+       }
+
+       @media (--screen-from-xlrg) {
+            padding: calc($unit * 8) calc($unit * 8) calc($unit * 8) calc($unit * 8);
+        }
+   }
+
+   &--bleed {
+
+        padding-left: calc($unit * 0);
+        padding-right: calc($unit * 0);
+   }
+
+   &--feat {
+       background-color: $hint-of-red;
+   }
+
+   &--primary {
+       background-color: $color-primary;
+
+       .list--expandable__title {
+           color: $color-text;
+       }
+   }
+
+   &--enh {
+       background-color: $hawkes-blue;
+   }
+
+   &--imagebg {
+
+       @media (--screen-to-med) {
+           background-image: none !important;
+           background-color: $color-primary;
+       }
+
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
+
+   &--map-bg {
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
+
+   &--lift-off {
+       background-position: 90% bottom;
+       background-repeat: no-repeat;
+       background-size: 480px;
+
+       @media (--screen-to-med) {
+           background-image: none !important;
+       }
+
+    @media (--screen-from-lrg) {
+        background-position: 80% bottom;
+        background-size: 768px;
+    }
+   }
+
+   &--private-client {
+       background-color: $color-primary;
+       color: white;
+   }
+
+   &__img {
+
+        &--sml {
+            max-height: 70px;
+        }
+
+        &--med {
+            max-height: 650px;
+        }
+   }
+}

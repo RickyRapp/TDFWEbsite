@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    # component.content
+\*------------------------------------*/
+
+.content {
+
+    &--two-columns {
+        display: flex;
+
+        &__item {
+            width: 50%;
+            padding: calc($unit * 18) calc($unit * 2);
+        }
+    }
+}

@@ -1,0 +1,157 @@
+<footer class="footer" role="contentinfo">
+    <div class="container">
+
+        <div class="row u-mar--bottom--lrg">
+            <div class="col col-sml-12 col-lrg-5">
+                <div class="row">
+                    <div class="col col-sml-12 col-med-6 col-push-med-3 col-lrg-9 col-push-lrg-0">
+                        <a href="/"><img alt="The Donors' Fund Logo" class="footer__logo" src="/assets/img/logo-invert.svg" /></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col col-sml-12 col-lrg-7 u-hide--to--med">
+                <div class="row">
+                    <div class="col col-sml-12 col-med-6 col-lrg-4">
+                        <h5 class="footer__title type--base">The Donors Fund</h5>
+                        <nav>
+                            <ul class="footer__nav">
+                                <li><a href="/what-we-offer.html"><span class="type--uppercase">What we offer</span></a></li>
+                                <li><a href="/investments.html"><span class="type--uppercase">Investments</span></a></li>
+                                <li><a href="/private-client.html"><span class="type--uppercase">Private Client</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col col-sml-12 col-med-6 col-lrg-4">
+                        <h5 class="footer__title type--base">For Charities</h5>
+                        <nav>
+                            <ul class="footer__nav">
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="/contact.html">Support</a></li>
+                                <li><a href="/charity.html">Charities</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col col-sml-12 col-med-6 col-lrg-4">
+                        <h5 class="footer__title type--base">Your Account</h5>
+                        <nav>
+                            <ul class="footer__nav">
+                                <li><a href="/create-account.html">Open an Account</a></li>
+                                <li><a href="/app/login">Log In</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer__impressum u-hide--to--med">
+            <div class="type--uppercase"><script type="text/JavaScript">document.write(new Date().getFullYear());</script>. The Donors Fund. All rights reserved.</div>
+            <nav class="u-mar--left--auto">
+                <ul class="footer__nav footer__nav--inline">
+                    <li><a href="/terms-of-use.html">Terms of Use</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/guidelines.html">Policies and Gudelines</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="type--center type--color--opaque u-hide--from--med">
+            <nav>
+                <ul class="footer__nav--mobile">
+                    <li><a target="_blank" href="/terms-of-use.html">Terms of Use</a></li>
+                    <li><a target="_blank" href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a target="_blank" href="/guidelines.html">Policies and Gudelines</a></li>
+                </ul>
+            </nav>
+            <div class="type--uppercase"><script type="text/JavaScript">document.write(new Date().getFullYear());</script>. The Donors Fund. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    (function(){
+
+  var doc = document.documentElement;
+  var w = window;
+
+  var prevScroll = w.scrollY || doc.scrollTop;
+  var curScroll;
+  var direction = 0;
+  var prevDirection = 0;
+
+  var header = document.getElementById('site-header');
+
+  var windowSize = function() {
+        $(window).width();
+    };  
+
+  var checkScroll = function() {
+
+    /*
+    ** Find the direction of scroll
+    ** 0 - initial, 1 - up, 2 - down
+    */
+
+    curScroll = w.scrollY || doc.scrollTop;
+    if (curScroll > prevScroll) { 
+      //scrolled up
+      direction = 2;
+    }
+    else if (curScroll < prevScroll) { 
+      //scrolled down
+      direction = 1;
+    }
+
+    if (direction !== prevDirection) {
+      toggleHeader(direction, curScroll);
+    }
+    
+    prevScroll = curScroll;
+
+  };
+
+  if (windowSize < 768) {
+        setScroll = 55;
+    } else {
+        setScroll = 157;
+    };
+
+   
+
+  window.onscroll = function(ev)
+{
+	var B= document.body; //IE 'quirks'
+        var D= document.documentElement; //IE with doctype
+        D= (D.clientHeight)? D: B;
+	
+	if (D.scrollTop == 0)
+		{
+			 header.classList.remove('shadow');
+		}     
+    else {
+        header.classList.add('shadow');
+    }  
+};
+
+
+
+  var toggleHeader = function(direction, curScroll) {
+    if (direction === 2 && curScroll > setScroll) { 
+      
+      //replace 52 with the height of your header in px
+
+      header.classList.add('hide', 'mobile-hide');
+      prevDirection = direction;
+    }
+    else if (direction === 1) {
+      header.classList.remove('hide', 'mobile-hide');
+      prevDirection = direction;
+    }
+  };
+  
+  window.addEventListener('scroll', checkScroll);
+
+})();
+</script>

@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    # util.hide
+\*------------------------------------*/
+
+
+.u {
+
+    &-hide {
+
+        &--to {
+
+            &--med {
+
+                @media (--screen-to-med) {
+                    display: none !important;
+                }
+            }
+
+            &--lrg {
+
+                @media (--screen-to-lrg) {
+                    display: none !important;
+                }
+            }
+
+            &--xlrg {
+                @media (--screen-to-xlrg) {
+                    display: none !important;
+                }
+            }
+        }
+
+        &--from {
+
+            &--med {
+
+                @media (--screen-from-med) {
+                    display: none !important;
+                }
+            }
+
+            &--lrg {
+
+                @media (--screen-from-lrg) {
+                    display: none !important;
+                }
+            }
+
+            &--xlrg {
+                @media (--screen-from-xlrg) {
+                    display: none !important;
+                }
+            }
+        }
+
+    }
+}
